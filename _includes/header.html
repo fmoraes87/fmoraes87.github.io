@@ -3,21 +3,9 @@
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-    <ul>
-      {% for lang in site.languagesNames %}
-        {%- if page.lang==lang[0] -%}   
-          {{ lang[1] | escape}} | 
-        {% else %}  
-          {% if lang[0] == site.defaultLang  %} 
-            <a href="{{ "/" }}">{{ lang[1] | escape}} </a> |
-          {% else %} 
-            <a href="{{ "/" | append: lang[0] }}">{{ lang[1] | escape}} </a> |
-          {% endif %}
-          
-        {%- endif -%} 
-      {% endfor %}
-    </ul>
+    <div>
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    </div>
 
     {%- if page_paths -%}
       <nav class="site-nav">

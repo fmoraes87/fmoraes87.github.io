@@ -46,8 +46,8 @@ plugins:
 
 defaultLang: en
 languagesNames:
-  en: En
-  pt_br: Br
+  en: /assets/icons/iconfinder_United-Kingdom-flag_32363.png
+  pt_br: /assets/icons/iconfinder_Brazil-Flag_32181.png
 #  zh: 中文
 
 defaults:
