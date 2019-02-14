@@ -18,7 +18,7 @@ email: m87.fernando@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Essa é um blog simples, criado para aprender como jekyll funciona.
   Ser simple é o que te faz grande.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fmoraes87
 github_username:  fmoraes87
@@ -49,22 +49,3 @@ languagesNames:
   en: /assets/icons/iconfinder_United-Kingdom-flag_32363.png
   pt_br: /assets/icons/iconfinder_Brazil-Flag_32181.png
 #  zh: 中文
-
-defaults:
-  #languages
-  -
-    scope:
-      path: ""
-    values:
-      lang: "en"
-      layout: default
-  -
-    scope:
-      path: "pt_br"
-    values:
-      lang: "pt_br"
-  -
-    scope:
-      path: "zh"
-    values:
-      lang: "zh"

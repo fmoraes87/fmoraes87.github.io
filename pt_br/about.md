@@ -2,7 +2,7 @@
 layout: page
 title: Sobre
 permalink: /pt_br/about/
-lag: pt_br
+lang: pt_br
 ---
 
 Este é o tema basico do Jekyll. Você pode encontrar mais informações sobre como customizar seu tema , assim como uso básico na documentação do Jekyll em [jekyllrb.com](https://jekyllrb.com/)
