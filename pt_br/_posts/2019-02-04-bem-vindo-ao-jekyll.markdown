@@ -6,11 +6,11 @@ title:  "Bem vindo ao Jekyll!"
 date:   2019-02-04 21:30:54 -0200
 categories: jekyll update
 ---
-Voce irá encontrar os posts no diretório `pt_BR\_posts`. Va em frente e edite o arquivo e reconstrua o site para ver as mudanças. Voçe pode reconstruir o site em direntes formas, mas a maneira mais comum é executando o comum `jekyll serve`, o qual executar um web server e regera o seu site quando um arquivo é atualizado.
+Voce irá encontrar os posts no diretório `pt_br\_posts`. Vá em frente, edite o arquivo e reconstrua o site para ver as mudanças. Você pode reconstruir o site de diferentes formas, mas a maneira mais comum é executando o comando `jekyll serve`, o qual irá executar um web server que irá regerar seu site caso algum arquivo tenha sido atualizado.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Para adicionar um novo post, simplesmente adicione um arquivo na pasta `pt_br\_posts` que possui a seguinte convenção a ser seguida `YYYY-MM-DD-nome-do-post.ext` e inclua as marcações necessárias. Qualquer dúvida, de uma olhada no código deste post para ter uma idéia de como funciona.
 
-Jekyll also offers powerful support for code snippets:
+Jekyll também oferece suporte a "code snippets":
 
 {% highlight ruby %}
 def print_hi(name)
@@ -20,7 +20,7 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Acesse  [Jekyll docs][jekyll-docs] para mais informações sobre sobre Jekyll. Todos bugs/funcionalidades requisitadas estão em [Jekyll’s GitHub repo][jekyll-gh]. Caso você possua algum questionamento, você pode perguntar em [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
