@@ -20,6 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Ser simples é o que te faz grande.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Social Media's
 twitter_username: fmoraes87
 github_username:  fmoraes87
 linkedin_username: fmoraes87
@@ -49,3 +51,9 @@ languagesNames:
   en: /assets/icons/iconfinder_United-Kingdom-flag_32363.png
   pt_br: /assets/icons/iconfinder_Brazil-Flag_32181.png
 #  zh: 中文
+
+# Disqus Comments
+disqus:
+    # Leave shortname blank to disable comments site-wide.
+    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+    shortname: fmoraes87
