@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Java Programming Book</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="affix"><a href="title-page.html">The Java Programming Language</a></li><li class="affix"><a href="ch00-00-introduction.html">Introduction</a></li><li><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="ch01-01-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li><a href="ch01-02-hello-world.html"><strong aria-hidden="true">1.2.</strong> Hello, World!</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Java Programming Book</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#the-java-programming-language" id="the-java-programming-language">The Java Programming Language</a></h1>
+<p><em>by Fernando Moraes</em></p>
+<p>This version of the text assumes you’re using JavaSDK 11 or later.
+See the <a href="ch01-01-installation.html">“Installation” section of Chapter 1</a><!-- ignore -->
+to install or update Java SDK.</p>
+<p>The 11 Edition of the Java language includes a number of improvements that
+make Java more ergonomic and easier to learn. This iteration of the book
+contains a number of changes to reflect those improvements.</p>
+<p>The HTML format is available online at
+<a href="http://fmoraes87.github.io/java_programming_book">http://fmoraes87.github.io/java_programming_book</a>.</p>
+<h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<h1><a class="header" href="#getting-started" id="getting-started">Getting Started</a></h1>
+<p>Let’s start your Java journey! There’s a lot to learn, but every journey starts
+somewhere. In this chapter, we’ll discuss:</p>
+<ul>
+<li>Installing Java on Linux, macOS, and Windows</li>
+<li>Writing a program that prints <code>Hello, world!</code></li>
+<li>Using <code>mvn</code>, java package manager and build system</li>
+</ul>
+<h2><a class="header" href="#installation" id="installation">Installation</a></h2>
+<p>The first step is to install Java SE Development Kit 11.X.Y (JavaSDK). You’ll need
+an internet connection for the download.</p>
+<p>The following steps install the latest stable version of the JavaSDK.
+Java's stability guarantees ensure that all the examples in the book that
+compile will continue to compile with newer Java versions. The output might
+differ slightly between versions, because Java often improves error messages
+and warnings. In other words, any newer, stable version of Java you install
+using these steps should work as expected with the content of this book.</p>
+<blockquote>
+<h3><a class="header" href="#command-line-notation" id="command-line-notation">Command Line Notation</a></h3>
+<p>In this chapter and throughout the book, we’ll show some commands used in the
+terminal. Lines that you should enter in a terminal all start with <code>$</code>. You
+don’t need to type in the <code>$</code> character; it indicates the start of each
+command. Lines that don’t start with <code>$</code> typically show the output of the
+previous command. Additionally, PowerShell-specific examples will use <code>&gt;</code>
+rather than <code>$</code>.</p>
+</blockquote>
+<h3><a class="header" href="#installing-java-on-linux-or-macos" id="installing-java-on-linux-or-macos">Installing <code>java</code> on Linux or macOS</a></h3>
+<p>You can download Oracle JDK from this <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">page</a>.
+Look for the heading “ Java SE Development Kit 11.0.4”, accept the license agreement and download the tarball
+file jdk-11.0.4_linux-x64_bin.tar.gz. Update 102 was the latest at the time of writing this book, 
+it might be different when you read this. Remember to substitue the actual number everywhere.</p>
+<p>...</p>
+<h3><a class="header" href="#installing-java-on-windows" id="installing-java-on-windows">Installing <code>java</code> on Windows</a></h3>
+<p>...</p>
+<h3><a class="header" href="#troubleshooting" id="troubleshooting">Troubleshooting</a></h3>
+<p>To check whether you have Java installed correctly, open a shell and enter this
+line:</p>
+<pre><code class="language-text">$ java -version
+</code></pre>
+<p>You should see the java version number as follow.</p>
+<pre><code class="language-text">java version &quot;x.y.z_nnn&quot;
+Java(TM) SE Runtime Environment (x.y.z_nnn-ww)
+...
+</code></pre>
+<p>If you see this information, you have installed Java SDK successfully! If you don’t
+see this information and you’re on Windows, check that Java is in your <code>%PATH%</code>
+system variable. If that’s all correct and Java still isn’t working, there are
+a number of places you can get help. A great resources is <a href="http://stackoverflow.com/questions/tagged/javase">Stack Overflow</a>.
+More information is available at the <a href="https://java.com/en/download/help/version_manual.xml">Oracle page</a></p>
+<h1><a class="header" href="#hello-world" id="hello-world">Hello, World!</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
