@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Hello, World! - Java Programming Book</title>
+        <title>Hello, World! - Java SE Programming Book</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -110,7 +110,7 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Java Programming Book</h1>
+                        <h1 class="menu-title">Java SE Programming Book</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -145,7 +145,144 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#hello-world" id="hello-world">Hello, World!</a></h1>
+                        <h2><a class="header" href="#hello-world" id="hello-world">Hello, World!</a></h2>
+<p>Now that you’ve installed Java, let’s write your first Java program. It’s
+traditional when learning a new language to write a little program that prints
+the text <code>Hello, world!</code> to the screen, so we’ll do the same here!</p>
+<blockquote>
+<p>Note: This book assumes basic familiarity with the command line. Java makes
+no specific demands about your editing or tooling or where your code lives, so
+if you prefer to use an integrated development environment (IDE) instead of
+the command line, feel free to use your favorite IDE.</p>
+</blockquote>
+<h3><a class="header" href="#creating-a-project-directory" id="creating-a-project-directory">Creating a Project Directory</a></h3>
+<p>You’ll start by making a directory to store your Java code. It doesn’t matter
+to Java where your code lives, but for the exercises and projects in this book,
+we suggest making a <em>java_projects</em> directory in your home directory and keeping all
+your projects there.</p>
+<p>Open a terminal and enter the following commands to make a <em>java_projects</em> directory
+and a directory for the Hello, world! project within the <em>java_projects</em> directory.</p>
+<p>For Linux, macOS, and PowerShell on Windows, enter this:</p>
+<pre><code class="language-text">$ mkdir ~/java_projects
+$ cd ~/java_projects
+$ mkdir hello_world
+$ cd hello_world
+</code></pre>
+<p>For Windows CMD, enter this:</p>
+<pre><code class="language-cmd">&gt; mkdir &quot;%USERPROFILE%\java_projects&quot;
+&gt; cd /d &quot;%USERPROFILE%\java_projects&quot;
+&gt; mkdir hello_world
+&gt; cd hello_world
+</code></pre>
+<h3><a class="header" href="#writing-and-running-a-java-program" id="writing-and-running-a-java-program">Writing and Running a Java Program</a></h3>
+<p>Next, make a new source file and call it <em>HelloWorld.java</em>. Java files always end with
+the <em>.java</em> extension. If you’re using more than one word in your filename, 
+use <a href="https://en.wikipedia.org/wiki/Camel_case">CamelCase</a> to indicate them. 
+For example, use <em>MyHome.java</em> rather than <em>myhome.java</em>. Repare that we are using 
+&quot;H&quot; (upper case) instead of &quot;h&quot; (lower case). 
+Class names should be nouns, in mixed case with the first letter of each internal word capitalized. 
+Try to keep your class names simple and descriptive. Use whole <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html">words-avoid</a> 
+acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, 
+such as URL or HTML). For more informations please check <a href="https://www.oracle.com/technetwork/java/codeconventions-135099.html">Java Naming Convention</a>.</p>
+<p>Now open the <em>HelloWorld.java</em> file you just created and enter the code in Listing 1-1.</p>
+<p><span class="filename">Filename: HelloWorld.java</span></p>
+<pre><code class="language-java">public class HelloWorld {
+	public static void main (String[] args){
+		System.out.println(&quot;Hello, world!&quot;);
+	}
+}
+</code></pre>
+<p><span class="caption">Listing 1-1: A program that prints <code>Hello, world!</code></span></p>
+<p>Save the file and go back to your terminal window. On terminal enter
+the following commands to compile:</p>
+<pre><code class="language-text">$ javac HelloWorld.java
+</code></pre>
+<p>That will create a new file called HelloWorld.class. Afterwards run the command:</p>
+<pre><code class="language-text">$ java HelloWorld.java
+Hello, world!
+</code></pre>
+<p>Regardless of your operating system, the string <code>Hello, world!</code> should print to
+the terminal. If you don’t see this output, refer back to the
+<a href="ch01-01-installation.html#troubleshooting">“Troubleshooting”</a><!-- ignore --> part of the Installation
+section for ways to get help.</p>
+<p>If <code>Hello, world!</code> did print, congratulations! You’ve officially written a Java
+program. That makes you a Java programmer—welcome!</p>
+<h3><a class="header" href="#anatomy-of-a-java-program" id="anatomy-of-a-java-program">Anatomy of a Java Program</a></h3>
+<p>Let’s review in detail what just happened in your Hello, world! program.
+Here’s the first piece of the puzzle:</p>
+<pre><code class="language-java">public class HelloWorld {
+
+...
+}
+</code></pre>
+<p>These lines define a java class. A class is declared using the keyword <code>class</code>, followed by the class name.
+The keyword <code>public</code> is called modifier. You will learn more about it later.
+Also, note that the class body is wrapped in curly brackets, {}. Java requires these around all function/method bodies. It’s good style to place the opening curly bracket on the same line as the function declaration, adding one space in between.</p>
+<blockquote>
+<h3><a class="header" href="#java-is-case-sensitive" id="java-is-case-sensitive">Java is case sensitive</a></h3>
+<p>It does not recognize the following two words as being the same thing: <code>Class</code> and <code>class</code>.</p>
+</blockquote>
+<p>Inside the java class is the following code:</p>
+<pre><code class="language-java">	public static void main (String[] args){
+		...
+	}
+</code></pre>
+<p>These lines define a method in Java. The main method is special: it is always the first code that runs in every executable Java program. The first line declares a method named <code>main</code> that has an array of strings (String [] args) as parameter and returns nothing (void).
+Also, note that the function body is wrapped in curly brackets, {}. A class containing a main method is referred as a &quot;main class&quot;. Any program that you want to run must have a <code>public main</code> method. We'll learn more about how to declare method/functions later.</p>
+<blockquote>
+<p>Brackets ( [] ) can be placed to the right of String or to the right of args, but the former is recommended:
+(String [] args) or (String args [])</p>
+</blockquote>
+<p>Inside the main function is the following code:</p>
+<pre><code class="language-java">	System.out.println(&quot;Hello, world!&quot;);
+</code></pre>
+<p>This line does all the work in this little program: it prints text to the screen.</p>
+<blockquote>
+<h3><a class="header" href="#going-deeper" id="going-deeper">Going deeper</a></h3>
+<p>System is a class in the <code>java.lang package</code> . The out is a <code>static</code> member of the System class,
+and is an instance of <code>java.io.PrintStream</code>. The println is a <code>method</code> of java.io.PrintStream. 
+This <code>method</code> is overloaded to print message to output destination, which is typically a console or file.</p>
+</blockquote>
+<h3><a class="header" href="#compiling-and-running-are-separate-steps" id="compiling-and-running-are-separate-steps">Compiling and Running Are Separate Steps</a></h3>
+<p>You’ve just run a newly created program, so let’s examine each step in the
+process.</p>
+<p>Before running a Java program, you <a href="#running-a-java-code-without-compilation"><code>must?</code></a> 
+(we will talk a little bit more about this later in this chapter)  compile it using 
+the Java compiler by entering the <code>javac</code> command and passing it the name of your source file, like this:</p>
+<pre><code class="language-cmd">$ javac HelloWord.java
+</code></pre>
+<p>If you have a C or C++ background, you’ll notice that this is similar to <code>gcc</code>
+or <code>clang</code>. After compiling successfully, Java outputs a bytecode.</p>
+<p>On Linux, macOS, and PowerShell on Windows, you can see the bytecode by
+entering the <code>ls</code> command in your shell. On Linux and macOS, you’ll see two
+files. With PowerShell on Windows, you’ll see the same files that you
+would see using CMD.</p>
+<pre><code class="language-text">$ ls
+HelloWord.java  HelloWord.class
+</code></pre>
+<p>With CMD on Windows, you would enter the following:</p>
+<pre><code class="language-cmd">&gt; dir /B %= the /B option says to only show the file names =%
+HelloWord.java 
+HelloWord.class
+</code></pre>
+<p>This shows the source code file with the <em>.java</em> extension and the bytecode file
+<em>.class</em> extension.</p>
+<p>If <em>HelloWord.java</em> was your Hello, world! program, this line would print <code>Hello, world!</code> to your terminal.</p>
+<p>If you’re more familiar with a dynamic language, such as Python or
+JavaScript, you might not be used to compiling and running a program as
+separate steps.</p>
+<p>Just compiling with <code>javac</code> is fine for simple programs, but as your project
+grows, you’ll want to manage all the options and make it easy to share your
+code. Next, we’ll introduce you to the Maven tool, which will help you write
+real-world Java programs.</p>
+<h3><a class="header" href="#running-a-java-code-without-compilation" id="running-a-java-code-without-compilation">Running a java code without compilation</a></h3>
+<p>Since Java 11 you can use the follow command to run a little program without compiling it:</p>
+<pre><code class="language-cmd">$ java HelloWord.java
+</code></pre>
+<p>The output should be:</p>
+<pre><code class="language-text">Hello, world!
+</code></pre>
+<p>This feature was introduced as a part of <a href="https://openjdk.java.net/jeps/330">JEP 330: Launch Single-File Source-Code Programs.</a></p>
 
                     </main>
 
