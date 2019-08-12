@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Java Programming Book</title>
+        <title>Java SE Programming Book</title>
         
         <meta name="robots" content="noindex" />
         
@@ -112,7 +112,7 @@
                             
                         </div>
 
-                        <h1 class="menu-title">Java Programming Book</h1>
+                        <h1 class="menu-title">Java SE Programming Book</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -272,14 +272,46 @@ program. That makes you a Java programmer—welcome!</p>
 <h3><a class="header" href="#anatomy-of-a-java-program" id="anatomy-of-a-java-program">Anatomy of a Java Program</a></h3>
 <p>Let’s review in detail what just happened in your Hello, world! program.
 Here’s the first piece of the puzzle:</p>
-<p>...</p>
+<pre><code class="language-java">public class HelloWorld {
+
+...
+}
+</code></pre>
+<p>These lines define a java class. A class is declared using the keyword <code>class</code>, followed by the class name.
+The keyword <code>public</code> is called modifier. You will learn more about it later.
+Also, note that the class body is wrapped in curly brackets, {}. Java requires these around all function/method bodies. It’s good style to place the opening curly bracket on the same line as the function declaration, adding one space in between.</p>
+<blockquote>
+<h3><a class="header" href="#java-is-case-sensitive" id="java-is-case-sensitive">Java is case sensitive</a></h3>
+<p>It does not recognize the following two words as being the same thing: <code>Class</code> and <code>class</code>.</p>
+</blockquote>
+<p>Inside the java class is the following code:</p>
+<pre><code class="language-java">	public static void main (String[] args){
+		...
+	}
+</code></pre>
+<p>These lines define a method in Java. The main method is special: it is always the first code that runs in every executable Java program. The first line declares a method named <code>main</code> that has an array of strings (String [] args) as parameter and returns nothing (void).
+Also, note that the function body is wrapped in curly brackets, {}. A class containing a main method is referred as a &quot;main class&quot;. Any program that you want to run must have a <code>public main</code> method. We'll learn more about how to declare method/functions later.</p>
+<blockquote>
+<p>Brackets ( [] ) can be placed to the right of String or to the right of args, but the former is recommended:
+(String [] args) or (String args [])</p>
+</blockquote>
+<p>Inside the main function is the following code:</p>
+<pre><code class="language-java">	System.out.println(&quot;Hello, world!&quot;);
+</code></pre>
+<p>This line does all the work in this little program: it prints text to the screen.</p>
+<blockquote>
+<h3><a class="header" href="#going-deeper" id="going-deeper">Going deeper</a></h3>
+<p>System is a class in the <code>java.lang package</code> . The out is a <code>static</code> member of the System class,
+and is an instance of <code>java.io.PrintStream</code>. The println is a <code>method</code> of java.io.PrintStream. 
+This <code>method</code> is overloaded to print message to output destination, which is typically a console or file.</p>
+</blockquote>
 <h3><a class="header" href="#compiling-and-running-are-separate-steps" id="compiling-and-running-are-separate-steps">Compiling and Running Are Separate Steps</a></h3>
 <p>You’ve just run a newly created program, so let’s examine each step in the
 process.</p>
-<p>Before running a Java program, you <code>must?</code> (we will talk a little bit more about this later in this chapter) 
-compile it using the Java compiler by entering the <code>javac</code> command and 
-passing it the name of your source file, like this:</p>
-<pre><code class="language-text">$ javac HelloWord.java
+<p>Before running a Java program, you <a href="ch01-02-hello-world.html#running-a-java-code-without-compilation"><code>must?</code></a> 
+(we will talk a little bit more about this later in this chapter)  compile it using 
+the Java compiler by entering the <code>javac</code> command and passing it the name of your source file, like this:</p>
+<pre><code class="language-cmd">$ javac HelloWord.java
 </code></pre>
 <p>If you have a C or C++ background, you’ll notice that this is similar to <code>gcc</code>
 or <code>clang</code>. After compiling successfully, Java outputs a bytecode.</p>
@@ -305,6 +337,14 @@ separate steps.</p>
 grows, you’ll want to manage all the options and make it easy to share your
 code. Next, we’ll introduce you to the Maven tool, which will help you write
 real-world Java programs.</p>
+<h3><a class="header" href="#running-a-java-code-without-compilation" id="running-a-java-code-without-compilation">Running a java code without compilation</a></h3>
+<p>Since Java 11 you can use the follow command to run a little program without compiling it:</p>
+<pre><code class="language-cmd">$ java HelloWord.java
+</code></pre>
+<p>The output should be:</p>
+<pre><code class="language-text">Hello, world!
+</code></pre>
+<p>This feature was introduced as a part of <a href="https://openjdk.java.net/jeps/330">JEP 330: Launch Single-File Source-Code Programs.</a></p>
 
                     </main>
 
