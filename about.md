@@ -4,11 +4,11 @@ title: About
 permalink: /about/
 lang: en
 ---
-Hi, my name is Fernando, I work as a java software developer for more than 10 years, working as java web software architect, desktop, full-stack and as management and team leader, working for the government and private sector, from small to big companies.
+Hi, my name is Fernando, I've been working as a java software developer for more than 10 years, as java web software architect, desktop, full-stack and as management and team leader, working for the government and private sector, from small to big companies
 
 For a long time, I've been an open-source contributor - AdempiereLBR / Adempiere/ Idempiere project - and that showed me the community power and how important it can be for us, I still try to follow this project and work with others opensource projects too.
 
-I have a postgraduate degree in Database and I'm a graduate in Computer Science on Mato Grosso Federal University. In management and technical leadership activities,  I had the opportunity to apply methodologies and techniques such as PMBOK, FPA, RUP, Scrum, and Kanban
+I have a postgraduate degree in Database and I have a bachelor's degree in Computer Science on Mato Grosso Federal University. In management and technical leadership activities, I had the opportunity to apply methodologies and techniques such as PMBOK, FPA, RUP, Scrum, and Kanban.
 
 Recently, I've been studying test and software quality and how to develop new applications using microservices concepts, with strong adoption of container use using Docker. About the frontend, I have very good "JSF/Primefaces"  knowledge and nowadays I been working with Angular and NoSQL. 
 
